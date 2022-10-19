@@ -9,7 +9,20 @@ document.querySelector(".js-list")
 
 const list = document.querySelector(".js-list")
 
+const kittenOneImage= 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg' alt="gatito";
+const kittenOneName = 'Anastacio';
+const kittenOneDesc = 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!'
+const kittenOneRace = 'British Shorthair'
 
+const kittenTwoImage= 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg' alt="gatito";
+const kittenTwoName = 'Fiona';
+const kittenTwoDesc = 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!'
+const kittenTwoRace = 'British Shorthair'
+
+const kittenThreeImage= 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg' alt="gatito";
+const kittenThreeName = 'Cielo';
+const kittenThreeDesc = 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!'
+const kittenThreeRace = 'British Shorthair'
 
 const kittenOne = 
   `<li class="card">
