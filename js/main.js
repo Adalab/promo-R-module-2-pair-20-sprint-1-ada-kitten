@@ -1,15 +1,17 @@
 "use strict";
-document.querySelector('.js-new-form')
-classList.remove("collapsed")
 
-document.queryselector(".js-list") 
+const formElement = document.querySelector('.js-new-form');
+
+formElement.classList.remove("collapsed")
+
+document.querySelector(".js-list") 
 
 
 const list = document.querySelector(".js-list")
 
-list.innerHTML += "kittenOne + kittenTwo + kittenThree";
 
-const kittenOne 
+
+const kittenOne = 
   `<li class="card">
 <article>
 <img
@@ -58,4 +60,4 @@ moleste. Es una maravilla acariciarle!
 </li>`; 
 
 
-
+list.innerHTML += kittenOne + kittenTwo + kittenThree;
