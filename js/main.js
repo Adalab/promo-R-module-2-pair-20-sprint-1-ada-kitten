@@ -25,38 +25,31 @@ const kittenThreeDesc = 'Ruiseño, juguetón, le guta estar tranquilo y que nadi
 const kittenThreeRace = 'British Shorthair'
 
 const kittenOne = 
-<li class="card"> <article> <img class="card_img" src= "${kittenOneImage}" alt="gatito" /><h3 class="card_title"> ${kittenOneName}</h3><h4 class="card_race"> ${kittenOneRace} </h4><p class="card_description"> ${kittenOneDesc} </p></article></li>`;
+`<li class="card"> <article> <img class="card_img" src=  ${kittenOneImage}  alt="gatito" /> <h3 class="card_title"> ${kittenOneName} </h3> <h4 class="card_race"> ${kittenOneRace} </h4> <p class="card_description"> ${kittenOneDesc} </p></article></li>`;
 
 
 
-const kittenTwo = `<li class="card">
-<article>
-<img
-class="card_img"
-src="https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"
-alt="gatito"
-/>
-<h3 class="card_title">Fiona</h3>
+const kittenTwo = 
+`<li class="card"> <article> <img class="card_img"
+src= "${kittenTwoImage}""alt="gatito" />
+<h3 class="card_title"> ${kittenTwoName}</h3>
+<h4 class="card_race"> ${kittenTwoRace} </h4>
 <p class="card_description">
-Ruiseño, juguetón, le guta estar tranquilo y que nadie le
-moleste. Es una maravilla acariciarle!
+${kittenTwoDesc}
 </p>
 </article>
 </li>`; 
 
-const kittenThree = `<li class="card">
-<article>
-<img
-class="card_img"
-src="https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"
-alt="gatito"
-/>
-<h3 class="card_title">Cielo</h3>
+const kittenThree =
+ `<li class="card"> <article> 
+<img class="card_img" src="${kittenThreeImage}" alt="gatito" />
+<h3 class="card_title">${kittenThreeName}</h3>
+<h4 class="card_race"> ${kittenThreeRace} </h4>
 <p class="card_description">
-Ruiseño, juguetón, le guta estar tranquilo y que nadie le
-moleste. Es una maravilla acariciarle!
+${kittenThreeDesc}
 </p>
 </article>
 </li>`; 
+
 list.innerHTML += kittenOne + kittenTwo + kittenThree;
-kittenOne.innerHTML = `<li class= "card" </li>> <article> ${kittenOneImage} </article> - <H3 class ="card_title" ${kittenOneName}<H3/>´;
+
