@@ -31,16 +31,16 @@ input_search_desc.value = 'cariñoso';
 const descrSearchText = input_search_desc.value;
 
 if( kittenOneDesc.includes(descrSearchText) ) { 
-    list.innerHTML = kittenOne
+    list.innerHTML += kittenOne
 } 
     
     if( kittenTwoDesc.includes(descrSearchText) ) {
-    list.innerHTML = kittenTwo
+    list.innerHTML += kittenTwo
     
  }
     
     if( kittenThreeDesc.includes(descrSearchText) ) {
-    list.innerHTML = kittenThree
+    list.innerHTML += kittenThree
   
     }
 
