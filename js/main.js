@@ -30,19 +30,6 @@ input_search_desc.value = 'cariñoso';
 
 const descrSearchText = input_search_desc.value;
 
-if( kittenOneDesc.includes(descrSearchText) ) { 
-    list.innerHTML += kittenOne
-} 
-    
-    if( kittenTwoDesc.includes(descrSearchText) ) {
-    list.innerHTML += kittenTwo
-    
- }
-    
-    if( kittenThreeDesc.includes(descrSearchText) ) {
-    list.innerHTML += kittenThree
-  
-    }
 
 
 const kittenOne = 
@@ -72,5 +59,20 @@ ${kittenThreeDesc}
 </article>
 </li>`; 
 
-list.innerHTML += kittenOne + kittenTwo + kittenThree;
+
+
+if( kittenOneDesc.includes(descrSearchText) ) { 
+    list.innerHTML += kittenOne
+} 
+    
+    if( kittenTwoDesc.includes(descrSearchText) ) {
+    list.innerHTML += kittenTwo
+    
+ }
+    
+    if( kittenThreeDesc.includes(descrSearchText) ) {
+    list.innerHTML += kittenThree
+  
+    }
+
 
