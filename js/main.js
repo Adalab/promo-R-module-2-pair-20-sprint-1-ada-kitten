@@ -12,12 +12,15 @@ const btnAdd = document.querySelector (".js-btn-add")
 const inputDesc = document.querySelector (".js-input-desc")
 const inputPhoto = document.querySelector (".js-input-photo")
 const inputName = document.querySelector (".js-input-name")
-const labelMesageError = document.querySelector('.js-label-error'); 
+const labelMesageError = document.querySelector('.js-label-error');
+const labelMessageError = document.querySelector ('js-label-search-error'); 
 const valueDesc = inputDesc.value;
 const valuePhoto = inputPhoto.value;
 const valueName = inputName.value;
 const btnRemove = document.querySelector (".js-btn-remove")
-
+const btnSearch = document.querySelector (".js-btn-search");
+const inputRace = document.querySelector (".js-input-race")
+const valueRace = inputRace.value; 
 
 const kittenOneImage= 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg' ;
 const kittenOneName = 'Anastacio';
@@ -64,7 +67,7 @@ ${kittenThreeDesc}
 list.innerHTML += kittenOne + kittenTwo + kittenThree;
 
 const input_search_desc = document.querySelector('.js_in_search_desc');
-input_search_desc.value = 'cariñoso';
+input_search_desc.value = '';
 
 
 const descrSearchText = input_search_desc.value;
@@ -107,23 +110,31 @@ btnAdd.addEventListener (`click`, (ev) => {
         labelMesageError.innerHTML = 'Debe rellenar todos los valores';
     }        
     
+
+    
+    
 //   ultimo ejercicio cancelar y guardar formulario    falta que se borre el formulario  
    
 });
 
 btnRemove.addEventListener (`click`, (ev) => {
-    console.log (`click añadir`)
     ev.preventDefault ();
+    console.log (`click cancelar`)
     formElement.classList.remove ('collapsed')
 
-    if (formElement.classList.contains('collapsed')) {
-        formElement.classList.remove ('collapsed')
-        
-    } else {
-        formElement.classList.add ('collapsed')}
+ 
      
     
         
    
+});
+
+
+btnSearch.addEventListener (`click`, (ev) => {
+    console.log (`click buscar`)
+    ev.preventDefault();
+
+    if (valueDesc === '' || valueRace === '' )
+    labelMessageError.innerHTML = 'Completa Raza y Descripción';
 });
 
