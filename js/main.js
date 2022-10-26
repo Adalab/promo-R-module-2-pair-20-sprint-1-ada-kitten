@@ -13,7 +13,7 @@ const inputDesc = document.querySelector (".js-input-desc")
 const inputPhoto = document.querySelector (".js-input-photo")
 const inputName = document.querySelector (".js-input-name")
 const labelMesageError = document.querySelector('.js-label-error');
-const labelMessageError = document.querySelector ('js-label-search-error'); 
+const labelMessageError = document.querySelector ('.js-label-search-error'); 
 const valueDesc = inputDesc.value;
 const valuePhoto = inputPhoto.value;
 const valueName = inputName.value;
@@ -64,7 +64,7 @@ ${kittenThreeDesc}
 </article>
 </li>`; 
 
-list.innerHTML += kittenOne + kittenTwo + kittenThree;
+//list.innerHTML += kittenOne + kittenTwo + kittenThree;
 
 const input_search_desc = document.querySelector('.js_in_search_desc');
 input_search_desc.value = '';
@@ -120,8 +120,9 @@ btnAdd.addEventListener (`click`, (ev) => {
 btnRemove.addEventListener (`click`, (ev) => {
     ev.preventDefault ();
     console.log (`click cancelar`)
-    formElement.classList.remove ('collapsed')
-
+    
+    inputDesc.value =""; inputName.value =""; inputPhoto.value =""; inputPhoto.value =""; inputRace.value ="";
+    formElement.classList.add('collapsed')
  
      
     
@@ -130,11 +131,13 @@ btnRemove.addEventListener (`click`, (ev) => {
 });
 
 
-btnSearch.addEventListener (`click`, (ev) => {
-    console.log (`click buscar`)
+btnSearch.addEventListener ("click", (ev) => {
     ev.preventDefault();
-
-    if (valueDesc === '' || valueRace === '' )
-    labelMessageError.innerHTML = 'Completa Raza y Descripción';
+    console.log (`click buscar`)
+    const valueRace = inputRace.value 
+    const valueDesc = inputDesc.value
+    
+    if (valueDesc === '' || valueRace === '' ){
+    labelMessageError.innerHTML = 'Completa Raza y Descripción';}
 });
 
