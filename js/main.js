@@ -139,5 +139,28 @@ btnSearch.addEventListener ("click", (ev) => {
     
     if (valueDesc === '' || valueRace === '' ){
     labelMessageError.innerHTML = 'Completa Raza y Descripción';}
+
 });
 
+//FUNCIONES
+
+
+const form = document.querySelector('.new-form');
+const formButton = document.querySelector('.fa-plus-circle');
+
+function showNewCatForm() {
+form.classList.remove('collapsed');
+}
+function hideNewCatForm() {
+form.classList.add('collapsed');
+}
+
+function handleClickNewCatForm(ev) {
+  ev.preventDefault();
+  if (form.classList.contains('collapsed')) {
+    showNewCatForm();
+} else {
+  hideNewCatForm();
+ }};
+
+ formButton.addEventListener("click", handleClickNewCatForm);
