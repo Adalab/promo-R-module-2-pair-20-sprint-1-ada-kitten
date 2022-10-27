@@ -80,14 +80,16 @@ if (kittenThreeDesc.includes(descrSearchText)) {
   list.innerHTML += kittenThree;
 }
 
-// event.preventDefault()
+// event.preventDefault()  
+
+
 function showNewCatForm() {
   formElement.classList.remove("collapsed");
 }
 function hideNewCatForm() {
   formElement.classList.add("collapsed");
 }
-function handleClickIcon(event) {
+function handleClickNewCatForm(event) {
   event.preventDefault();
   if (formElement.classList.contains("collapsed")) {
     showNewCatForm();
@@ -136,4 +138,31 @@ btnSearch.addEventListener("click", (ev) => {
 
 formButton.addEventListener("click", handleClickNewCatForm);
 
-//  linkNewFormElememt.addEventListener('click', handleClickNewCatForm);
+linkNewFormElememt.addEventListener('click', handleClickNewCatForm);
+
+function handleClickNewCatForm(event) {
+    event.preventDefault();
+    if (formElement.classList.contains("collapsed")) {
+      showNewCatForm();
+    } else {
+      hideNewCatForm();
+    }
+  }
+
+  function renderKitten (kittenData) {
+    return `<li class="card"> <article> 
+    <img class="card_img" src="${kittenData.inputPhoto}" alt="gatito" />
+    <h3 class="card_title">${kittenData.inputName}</h3>
+    <h4 class="card_race"> ${kittenData.inputRace} </h4>
+    <p class="card_description">
+    ${kittenData.inputDesc}
+    </p>
+    </article>
+    </li>`;
+  
+
+
+}
+
+
+
