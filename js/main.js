@@ -80,25 +80,17 @@ if (kittenThreeDesc.includes(descrSearchText)) {
   list.innerHTML += kittenThree;
 }
 
-// event.preventDefault()  
+// event.preventDefault()
 
-
-function showNewCatForm() {
-  formElement.classList.remove("collapsed");
-}
-function hideNewCatForm() {
-  formElement.classList.add("collapsed");
-}
-function handleClickNewCatForm(event) {
-  event.preventDefault();
-  if (formElement.classList.contains("collapsed")) {
-    showNewCatForm();
-  } else {
-    hideNewCatForm();
-  }
-}
-
-icon.addEventListener(`click`, handleClickIcon);
+// icon.addEventListener(`click`, (event) => {
+//   console.log(`he hecho click`);
+//   event.preventDefault();
+//   if (formElement.classList.contains("collapsed")) {
+//     formElement.classList.remove("collapsed");
+//   } else {
+//     formElement.classList.add("collapsed");
+//   }
+// });
 
 btnAdd.addEventListener(`click`, (ev) => {
   console.log(`click añadir`);
@@ -134,35 +126,23 @@ btnSearch.addEventListener("click", (ev) => {
   }
 });
 
-//FUNCIONES
-
-formButton.addEventListener("click", handleClickNewCatForm);
-
-linkNewFormElememt.addEventListener('click', handleClickNewCatForm);
-
-function handleClickNewCatForm(event) {
-    event.preventDefault();
-    if (formElement.classList.contains("collapsed")) {
-      showNewCatForm();
-    } else {
-      hideNewCatForm();
-    }
-  }
-
-  function renderKitten (kittenData) {
-    return `<li class="card"> <article> 
-    <img class="card_img" src="${kittenData.inputPhoto}" alt="gatito" />
-    <h3 class="card_title">${kittenData.inputName}</h3>
-    <h4 class="card_race"> ${kittenData.inputRace} </h4>
-    <p class="card_description">
-    ${kittenData.inputDesc}
-    </p>
-    </article>
-    </li>`;
-  
-
-
+// Funciones I, Ejercicio I
+function showNewCatForm() {
+  form.classList.remove("collapsed");
+}
+function hideNewCatForm() {
+  form.classList.add("collapsed");
 }
 
+function handleClickNewCatForm(ev) {
+  ev.preventDefault();
+  if (formElement.classList.contains("collapsed")) {
+    formElement.classList.remove("collapsed");
+  } else {
+    formElement.classList.add("collapsed");
+  }
+}
 
+icon.addEventListener("click", handleClickNewCatForm);
 
+// Funciones I, ejercicio II
