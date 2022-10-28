@@ -92,16 +92,16 @@ const descrSearchText = input_search_desc.value;
 //   }
 // });
 
-btnAdd.addEventListener(`click`, (ev) => {
-  console.log(`click añadir`);
-  ev.preventDefault();
+// btnAdd.addEventListener(`click`, (ev) => {
+//   console.log(`click añadir`);
+//   ev.preventDefault();
 
-  if (valueDesc === "" || valuePhoto === "" || valueName === "") {
-    labelMesageError.innerHTML = "Debe rellenar todos los valores";
-  }
+//   if (valueDesc === "" || valuePhoto === "" || valueName === "") {
+//     labelMesageError.innerHTML = "Debe rellenar todos los valores";
+//   }
 
-  //   ultimo ejercicio cancelar y guardar formulario    falta que se borre el formulario
-});
+//   //   ultimo ejercicio cancelar y guardar formulario
+// });
 
 btnRemove.addEventListener(`click`, (ev) => {
   ev.preventDefault();
@@ -109,7 +109,6 @@ btnRemove.addEventListener(`click`, (ev) => {
 
   inputDesc.value = "";
   inputName.value = "";
-  inputPhoto.value = "";
   inputPhoto.value = "";
   inputRace.value = "";
   formElement.classList.add("collapsed");
@@ -180,3 +179,17 @@ list.innerHTML += renderKitten(
   kittenThreeName,
   kittenThreeRace
 );
+// Funciones I ejercicio 3
+
+function addNewKitten(event) {
+  event.preventDefault();
+  console.log(`click añadir`);
+
+  if (valueDesc === "" || valuePhoto === "" || valueName === "") {
+    labelMesageError.innerHTML = "Debe rellenar todos los valores";
+  }
+}
+
+btnAdd.addEventListener(`click`, addNewKitten);
+
+//   ultimo ejercicio cancelar y guardar formulario
