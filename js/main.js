@@ -68,17 +68,17 @@ input_search_desc.value = "";
 
 const descrSearchText = input_search_desc.value;
 
-if (kittenOneDesc.includes(descrSearchText)) {
-  list.innerHTML += kittenOne;
-}
+// if (kittenOneDesc.includes(descrSearchText)) {
+//   list.innerHTML += kittenOne;
+// }
 
-if (kittenTwoDesc.includes(descrSearchText)) {
-  list.innerHTML += kittenTwo;
-}
+// if (kittenTwoDesc.includes(descrSearchText)) {
+//   list.innerHTML += kittenTwo;
+// }
 
-if (kittenThreeDesc.includes(descrSearchText)) {
-  list.innerHTML += kittenThree;
-}
+// if (kittenThreeDesc.includes(descrSearchText)) {
+//   list.innerHTML += kittenThree;
+// }
 
 // event.preventDefault()
 
@@ -146,3 +146,37 @@ function handleClickNewCatForm(ev) {
 icon.addEventListener("click", handleClickNewCatForm);
 
 // Funciones I, ejercicio II
+// Los parámetros tienen que coincidir en orden
+
+function renderKitten(url, desc, name, race) {
+  const htmlKitten = `<li class="card"> <article> 
+  <img class="card_img" src="${url}" alt="gatito" />
+  <h3 class="card_title">${name}</h3>
+  <h4 class="card_race"> ${race} </h4>
+  <p class="card_description">
+  ${desc}
+  </p>
+  </article>
+  </li>`;
+  // Dentro de las comillas pueden ir pueden ir variables, el texto. Pero mejor variables por el código. Esto es similar a los includes en HTML @@
+  return htmlKitten;
+}
+list.innerHTML += renderKitten(
+  kittenOneImage,
+  kittenOneDesc,
+  kittenOneName,
+  kittenOneRace
+);
+
+list.innerHTML += renderKitten(
+  kittenTwoImage,
+  kittenTwoDesc,
+  kittenTwoName,
+  kittenTwoRace
+);
+list.innerHTML += renderKitten(
+  kittenThreeImage,
+  kittenThreeDesc,
+  kittenThreeName,
+  kittenThreeRace
+);
